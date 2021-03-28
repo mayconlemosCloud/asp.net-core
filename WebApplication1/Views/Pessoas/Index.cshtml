@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Pessoa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="pessoas/CriarPessoa">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.nome
+            </td>
+            <td>
+                @item.telefone
+            </td>
+            <td>
+             
+            </td>
+            <td>
+                <a href="pessoas/AtualizarPessoa/@item.id">Edit</a> |
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

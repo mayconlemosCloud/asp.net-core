@@ -1,0 +1,40 @@
+﻿@model WebApplication1.Models.Pessoa
+
+@{
+    ViewData["Title"] = "CriarPessoa";
+}
+
+<h2>CriarPessoa</h2>
+
+<h4>Pessoa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form action="CriarPessoa" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label for="nome" class="control-label"></label>
+                <input for="nome" name="nome" class="form-control" />
+                <span for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="telefone" class="control-label"></label>
+                <input for="telefone" name="telefone" class="form-control" />
+                <span for="telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="idade" class="control-label"></label>
+                <input for="idade" name="idade" class="form-control" />
+                <span for="idade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
