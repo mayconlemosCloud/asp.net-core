@@ -68,5 +68,10 @@ namespace WebApplication1.Controllers
             }
             else return NotFound();
         }
+
+        public void Salva()
+        {
+
+        }
     }
 }
